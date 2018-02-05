@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  height: 7rem;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: main;
+}
+
+.logo {
+  margin-right: auto;
+}
