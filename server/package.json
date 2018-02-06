@@ -22,6 +22,8 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "( cd ./client && yarn start)",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild":
+      "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn run build --prefix client"
   }
 }
