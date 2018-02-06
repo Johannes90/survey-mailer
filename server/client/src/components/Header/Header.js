@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 import Button from "../Button/Button";
 import Logo from "../../assets/Logo/Color.svg";
+import Payments from "../Payments/Payments";
 
 class Header extends Component {
   renderContent() {
@@ -12,22 +13,22 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return (
-          <li>
-            <Button type="secondary">Login</Button>
-            <Button target="/auth/google" type="primary">
-              Sign Up
-            </Button>
-          </li>
-        );
+        return [
+          <Button key="1" type="secondary">
+            Login
+          </Button>,
+          <Button key="2" target="/auth/google" type="primary">
+            Sign Up
+          </Button>
+        ];
       default:
-        return (
-          <li>
-            <Button target="/api/logout" type="secondary">
-              Logout
-            </Button>
-          </li>
-        );
+        return [
+          <Payments key="1" />,
+          <span key="2">Credits: {this.props.auth.credits}</span>,
+          <Button key="3" target="/api/logout" type="secondary">
+            Logout
+          </Button>
+        ];
     }
   }
 
