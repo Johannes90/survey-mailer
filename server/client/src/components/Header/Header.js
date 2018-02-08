@@ -23,8 +23,10 @@ class Header extends Component {
         ];
       default:
         return [
+          <span key="2" className={styles.credits}>
+            {this.props.auth.credits}
+          </span>,
           <Payments key="1" />,
-          <span key="2">Credits: {this.props.auth.credits}</span>,
           <Button key="3" target="/api/logout" type="secondary">
             Logout
           </Button>
