@@ -14,10 +14,20 @@ class Header extends Component {
         return;
       case false:
         return [
-          <Button key="1" type="secondary">
+          <Button
+            key="1"
+            type="secondary"
+            renderAs="link"
+            target="/auth/google"
+          >
             Login
           </Button>,
-          <Button key="2" target="/auth/google" type="primary">
+          <Button
+            key="2"
+            renderAs="link"
+            target="/auth/google"
+            format="primary"
+          >
             Sign Up
           </Button>
         ];
@@ -27,7 +37,12 @@ class Header extends Component {
             {this.props.auth.credits}
           </span>,
           <Payments key="1" />,
-          <Button key="3" target="/api/logout" type="secondary">
+          <Button
+            key="3"
+            renderAs="link"
+            target="/api/logout"
+            format="secondary"
+          >
             Logout
           </Button>
         ];
