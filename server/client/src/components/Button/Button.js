@@ -26,6 +26,7 @@ const Button = props => {
     case "button":
       return (
         <button
+          onClick={props.onClick}
           type={props.type}
           className={[styles.button, styles[props.format]].join(" ")}
         >
@@ -35,6 +36,7 @@ const Button = props => {
     default:
       return (
         <button
+          onClick={props.onClick}
           type={props.type}
           className={[styles.button, styles[props.format]].join(" ")}
         >
