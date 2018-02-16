@@ -8,10 +8,13 @@ import styles from "./Dashboard.module.css";
 const dashboard = () => {
   return (
     <div className={styles.container}>
-      <h1>Hello World</h1>
-      <Button renderAs="router" target="/surveys/new" format="secondary">
-        Create New Survey
-      </Button>
+      <div className={styles.topRow}>
+        <h1 className={styles.title}>Dashboard</h1>
+        <Button renderAs="router" target="/surveys/new" format="secondary">
+          Create New Survey
+        </Button>
+      </div>
+
       <SurveyList />
     </div>
   );

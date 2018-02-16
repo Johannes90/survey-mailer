@@ -34,7 +34,7 @@ class Header extends Component {
       default:
         return [
           <span key="2" className={styles.credits}>
-            {this.props.auth.credits}
+            {this.props.auth.credits} Credits
           </span>,
           <Payments key="1" />,
           <Button

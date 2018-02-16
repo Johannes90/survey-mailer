@@ -5,4 +5,5 @@
     [main-start] minmax(0, 96rem) [main-end]
     minmax(2rem, 1fr) [full-end];
   width: 100%;
+  background: #f9faf9;
 }
